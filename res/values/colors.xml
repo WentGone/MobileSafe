@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="grey">#C0C0C0</color>
+    <color name="divider_grey">#D2D2D2</color>
+    <color name="green">#3F990E</color>
+    <color name="red">#ff0000</color>
+    <color name="transparent_green">#552EBE81</color>
+    <color name="transparent_blue">#55616FEF</color>
+    <color name="transparent_white">#55ffffff</color>
+    <color name="transparent_black">#55000000</color>
+    <color name="transparent_orgine">#55FFFF53</color>
+    <color name="transparent_red">#55FF0000</color>
+    <color name="intercept_grey_text">#ADADAD</color>
+    <color name="blacknumber_item_click_show_background">#626262</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    
+    <color name="progress_arc_background">#55B9B9B9</color>
+    <color name="progress_arc_pro">#007500</color>
+</resources>

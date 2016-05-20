@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:gravity="center"
+    android:orientation="vertical" >
+<!-- android:layout_marginRight="1px"
+        android:layout_marginTop="1px"  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="vertical" 
+        android:padding="@dimen/dimen_10dp">
+
+        <ImageView
+            android:id="@+id/item_GridView_SlidLeft_IM"
+            android:layout_width="@dimen/dimen_40dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/item_GridView_SlidLeft_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机防盗"
+            android:textColor="@android:color/black"
+            android:textSize="13sp" 
+            android:paddingTop="@dimen/dimen_5dp"/>
+    </LinearLayout>
+
+</LinearLayout>

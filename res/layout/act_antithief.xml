@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:antithief="http://schemas.android.com/apk/res/com.went_gone.mobilesafe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        style="@style/Title_Layout"
+        android:background="@color/green" >
+
+        <TextView
+            android:id="@+id/ComeBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawableLeft="@drawable/event_back_normal"
+            android:onClick="comeBack" />
+
+        <TextView
+            style="@style/Title_textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/ComeBack"
+            android:text="手机防盗"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/MobileSafe_Setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/actionbar_settings_normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_30dp"
+        android:paddingLeft="@dimen/dimen_40dp"
+        android:paddingRight="@dimen/dimen_40dp" >
+
+        <ImageView
+            android:id="@+id/MoblieSafe_IM_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/antithief_state_close" />
+
+        <FrameLayout
+            android:id="@+id/MobileSafe_FrameLayout"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+
+            <RelativeLayout
+                android:id="@+id/MobileSafe_Relayout_Close"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" >
+
+                <Button
+                    android:id="@+id/MobileSafe_OpenAnitithief"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:background="@drawable/mobilesafe_button_background"
+                    android:text="开启防盗保护"
+                    android:textColor="@color/green"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/MobileSafe_OpenAnitithief"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:gravity="center_horizontal"
+                    android:text="防止手机丢失，请立即开启防盗保护"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/MobileSafe_Relayout_Open"
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:visibility="invisible" >
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="已开启防盗保护"
+                    android:textColor="@color/green"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/dimen_50dp"
+        android:paddingRight="@dimen/dimen_50dp"
+        android:paddingTop="@dimen/dimen_30dp" >
+
+        <!--
+            antithief:titleon="锁定手机"
+            antithief:titleoff="· 锁定手机"
+            antithief:msgon="10086"
+            antithief:msgoff="未设置"
+            antithief:srcon="@drawable/antithief_item_open"
+            antithief:srcoff="@drawable/antithief_item_close"
+            antithief:src="@drawable/antithief_item_close"
+        -->
+
+        <com.went_gone.mobilesafe.ui.AntithiefItemView
+            android:id="@+id/MobileSafe_AIV_LockMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            antithief:titleoff="· 锁定手机"
+            antithief:titleon="锁定手机" >
+        </com.went_gone.mobilesafe.ui.AntithiefItemView>
+
+        <com.went_gone.mobilesafe.ui.AntithiefItemView
+            android:id="@+id/MobileSafe_AIV_Alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            antithief:titleoff="· 发出警报"
+            antithief:titleon="发出警报" >
+        </com.went_gone.mobilesafe.ui.AntithiefItemView>
+
+        <com.went_gone.mobilesafe.ui.AntithiefItemView
+            android:id="@+id/MobileSafe_AIV_LocationTracking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/MobileSafe_AIV_LockMobile"
+            antithief:titleoff="· 定位追踪"
+            antithief:titleon="定位追踪" >
+        </com.went_gone.mobilesafe.ui.AntithiefItemView>
+
+        <com.went_gone.mobilesafe.ui.AntithiefItemView
+            android:id="@+id/MobileSafe_AIV_DestoryDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/MobileSafe_AIV_Alert"
+            antithief:titleoff="· 数据销毁"
+            antithief:titleon="数据销毁" >
+        </com.went_gone.mobilesafe.ui.AntithiefItemView>
+
+        <com.went_gone.mobilesafe.ui.AntithiefItemView
+            android:id="@+id/MobileSafe_AIV_ChangeCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/MobileSafe_AIV_LocationTracking"
+            antithief:msgoff="未设置"
+            antithief:msgon="10086"
+            antithief:src="@drawable/antithief_item_close"
+            antithief:srcoff="@drawable/antithief_item_close"
+            antithief:srcon="@drawable/antithief_item_open"
+            antithief:titleoff="· 换卡通知"
+            antithief:titleon="换卡通知" >
+        </com.went_gone.mobilesafe.ui.AntithiefItemView>
+
+        <com.went_gone.mobilesafe.ui.AntithiefItemView
+            android:id="@+id/MobileSafe_AIV_BackupsDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/MobileSafe_AIV_DestoryDate"
+            antithief:msgoff="未设置"
+            antithief:msgon="已备份"
+            antithief:src="@drawable/antithief_item_close"
+            antithief:srcoff="@drawable/antithief_item_close"
+            antithief:srcon="@drawable/antithief_item_open"
+            antithief:titleoff="· 数据备份"
+            antithief:titleon="数据备份" >
+        </com.went_gone.mobilesafe.ui.AntithiefItemView>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/green" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider_horizontal"
+        android:dividerPadding="@dimen/dimen_5dp"
+        android:orientation="vertical"
+        android:showDividers="middle" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="找回他人手机" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/arrow_right_normal" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Antithief_Introduce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="防盗介绍" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/arrow_right_normal" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash"
+    android:id="@+id/Splash_root"
+    tools:context=".SplashActivity">
+
+    <!-- android:shadowRadius  阴影所在范围 
+            android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+         android:shadowColor="#ffff00"
+    -->
+
+    <TextView
+        android:id="@+id/Splash_Tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="" 
+        android:textSize="11sp"/>
+
+    <ProgressBar
+        android:id="@+id/Splash_progressBar"
+        style="android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Splash_Tv_version"
+        android:layout_centerInParent="true" 
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:id="@+id/Splash_Linear_Progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+
+        <ProgressBar
+            android:id="@+id/Splash_progressBar_Progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:paddingLeft="@dimen/dimen_10dp"
+            android:paddingRight="@dimen/dimen_10dp"
+            />
+
+        <TextView
+            android:id="@+id/Splash_Tv_Progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/dimen_10dp"
+            android:text=""
+             />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/Act_Title_Layout" >
+
+        <TextView
+            android:id="@+id/ComeBack"
+            style="@style/Act_Title_textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawableLeft="@drawable/event_back_normal"
+            android:gravity="center_vertical"
+            android:onClick="comeBack"
+            android:text="返回" />
+
+        <TextView
+            style="@style/Act_Title_textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="应用加锁" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/act_lockapp_RadiopGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dimen_10dp" >
+
+        <RadioButton
+            android:id="@+id/act_lockapp_RB_nolock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableBottom="@drawable/intercept_radiobutton_background"
+            android:drawablePadding="@dimen/dimen_10dp"
+            android:gravity="center"
+            android:text="未加锁"
+            android:textColor="@android:color/black" />
+
+        <RadioButton
+            android:id="@+id/act_lockapp_RB_lock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableBottom="@drawable/intercept_radiobutton_background"
+            android:drawablePadding="@dimen/dimen_10dp"
+            android:gravity="center"
+            android:text="已加锁"
+            android:textColor="@android:color/black" />
+    </RadioGroup>
+	<FrameLayout 
+	    android:id="@+id/act_lockapp_FrameLayout"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@color/white">
+	</FrameLayout>
+</LinearLayout>

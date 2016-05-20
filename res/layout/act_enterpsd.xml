@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+    <TextView 
+        android:id="@+id/act_enterpsd_TV_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="name"/>
+    <ImageView 
+        android:id="@+id/act_enterpsd_IV_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+    <EditText 
+        android:id="@+id/act_enterpsd_ET_psd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入密码"
+        android:inputType="number"
+        android:password="true"/>
+    <Button 
+        android:id="@+id/act_enterpsd_Btn_sure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确认"/>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/Act_Title_Layout" >
+
+        <TextView
+            android:id="@+id/ComeBack"
+            style="@style/Act_Title_textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawableLeft="@drawable/event_back_normal"
+            android:gravity="center_vertical"
+            android:onClick="comeBack"
+            android:text="归属地查询" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请输入所要查询的手机号:"
+        android:textColor="@android:color/black"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/Attribution_ET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/Attribution_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查询" />
+
+    <TextView
+        android:id="@+id/Attribution_TV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="未知号码"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+</LinearLayout>

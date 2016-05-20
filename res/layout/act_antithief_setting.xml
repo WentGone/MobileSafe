@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mobileSafe="http://schemas.android.com/apk/res/com.went_gone.mobilesafe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        style="@style/Title_Layout"
+        android:background="@color/green" >
+
+        <TextView
+            android:id="@+id/ComeBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawableLeft="@drawable/event_back_normal"
+            android:onClick="comeBack" />
+
+        <TextView
+            style="@style/Title_textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/ComeBack"
+            android:text="防盗设置"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <TextView
+        style="@style/Antithief_Setting_Item_Title"
+        android:text="服务开关" />
+
+    <com.went_gone.mobilesafe.ui.TextCheckBoxView
+        android:id="@+id/Antithief_Setting_AntithiefService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        mobileSafe:text="手机防盗服务" >
+    </com.went_gone.mobilesafe.ui.TextCheckBoxView>
+
+    <TextView
+        style="@style/Antithief_Setting_Item_Title"
+        android:text="换卡设置" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.went_gone.mobilesafe.ui.TextCheckBoxView
+            android:id="@+id/Antithief_Setting_ChangeCardMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            mobileSafe:text="换卡信息通知" >
+        </com.went_gone.mobilesafe.ui.TextCheckBoxView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:background="@color/divider_grey" />
+
+        <com.went_gone.mobilesafe.ui.SettingItemView
+            android:id="@+id/Antithief_Setting_ContactNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingLeft="@dimen/dimen_5dp"
+            android:paddingRight="@dimen/dimen_5dp"
+            mobileSafe:desoff="尚未设置安全号码"
+            mobileSafe:deson=""
+            mobileSafe:destitle="紧急联系人号码"
+            mobileSafe:ischeckbox="false" >
+        </com.went_gone.mobilesafe.ui.SettingItemView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:background="@color/divider_grey" />
+
+        <com.went_gone.mobilesafe.ui.TextCheckBoxView
+            android:id="@+id/Antithief_Setting_ChangeCardContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            mobileSafe:ischeckbox="false"
+            mobileSafe:text="编辑换卡通知内容" >
+        </com.went_gone.mobilesafe.ui.TextCheckBoxView>
+    </LinearLayout>
+
+    <TextView
+        style="@style/Antithief_Setting_Item_Title"
+        android:text="其他设置" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.went_gone.mobilesafe.ui.SettingItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingLeft="@dimen/dimen_5dp"
+            android:paddingRight="@dimen/dimen_5dp"
+            mobileSafe:desoff="尚未设置安全号码"
+            mobileSafe:deson=""
+            mobileSafe:destitle="紧急联系人号码"
+            mobileSafe:ischeckbox="false" >
+        </com.went_gone.mobilesafe.ui.SettingItemView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:background="@color/divider_grey" />
+
+        <com.went_gone.mobilesafe.ui.TextCheckBoxView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            mobileSafe:ischeckbox="false"
+            mobileSafe:text="备份防盗指令" >
+        </com.went_gone.mobilesafe.ui.TextCheckBoxView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="rightpadding" format="dimension"></attr>
+    <attr name="ischeckbox" format="boolean"></attr>
+
+    <declare-styleable name="SlidingMenu">
+        <attr name="rightpadding"></attr>
+    </declare-styleable>
+    <declare-styleable name="SlidingMenu">
+        <attr name="rightpadding"></attr>
+    </declare-styleable>
+    <declare-styleable name="com.went_gone.mobilesafe.ui.SettingItemView">
+        <attr name="destitle" format="string"></attr>
+        <attr name="desoff" format="string"></attr>
+        <attr name="deson" format="string"></attr>
+        <attr name="ischeckbox"></attr>
+    </declare-styleable>
+    <declare-styleable name="com.went_gone.mobilesafe.ui.AntithiefItemView">
+        <attr name="titleon" format="string"></attr>
+        <attr name="titleoff" format="string"></attr>
+        <attr name="msgon" format="string"></attr>
+        <attr name="msgoff" format="string"></attr>
+        <attr name="srcon" format="reference|color" />
+        <attr name="src" format="reference|color" />
+        <attr name="srcoff" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="com.went_gone.mobilesafe.ui.TextCheckBoxView">
+        <attr name="text" format="string"></attr>
+        <attr name="ischeckbox"></attr>
+    </declare-styleable>
+    <declare-styleable name="com.went_gone.mobilesafe.ui.AntithiefIntroduceItemView">
+        <attr name="srcimage" format="reference|color"></attr>
+        <attr name="title_text" format="string"></attr>
+        <attr name="des_text" format="string"></attr>
+    </declare-styleable>
+
+</resources>

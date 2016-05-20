@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mobileSafe="http://schemas.android.com/apk/res/com.went_gone.mobilesafe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/Act_Title_Layout" >
+
+        <TextView
+            android:id="@+id/ComeBack"
+            style="@style/Act_Title_textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawableLeft="@drawable/event_back_normal"
+            android:gravity="center_vertical"
+            android:onClick="comeBack"
+            android:text="防盗介绍" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <com.went_gone.mobilesafe.ui.AntithiefIntroduceItemView
+            android:id="@+id/AII_Lock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            mobileSafe:srcimage="@drawable/antithief_lock"
+            mobileSafe:title_text="锁定手机" >
+        </com.went_gone.mobilesafe.ui.AntithiefIntroduceItemView>
+
+        <com.went_gone.mobilesafe.ui.AntithiefIntroduceItemView
+            android:id="@+id/AII_Loction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            mobileSafe:srcimage="@drawable/antithief_location"
+            mobileSafe:title_text="定位追踪" >
+        </com.went_gone.mobilesafe.ui.AntithiefIntroduceItemView>
+
+        <com.went_gone.mobilesafe.ui.AntithiefIntroduceItemView
+            android:id="@+id/AII_Alarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            mobileSafe:srcimage="@drawable/antithief_alarm"
+            mobileSafe:title_text="发报警音" >
+        </com.went_gone.mobilesafe.ui.AntithiefIntroduceItemView>
+
+        <com.went_gone.mobilesafe.ui.AntithiefIntroduceItemView
+            android:id="@+id/AII_BackUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            mobileSafe:srcimage="@drawable/antithief_backup"
+            mobileSafe:title_text="数据备份" >
+        </com.went_gone.mobilesafe.ui.AntithiefIntroduceItemView>
+
+        <com.went_gone.mobilesafe.ui.AntithiefIntroduceItemView
+            android:id="@+id/AII_Destory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            mobileSafe:srcimage="@drawable/antithief_dele"
+            mobileSafe:title_text="数据销毁" >
+        </com.went_gone.mobilesafe.ui.AntithiefIntroduceItemView>
+    </LinearLayout>
+
+</LinearLayout>

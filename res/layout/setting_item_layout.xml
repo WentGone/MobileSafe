@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_5dp" >
+
+        <TextView
+            android:id="@+id/Setting_TV_title"
+            style="@style/Setting_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/Setting_TV_des"
+            style="@style/Setting_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Setting_TV_title"
+            android:text="" />
+
+        <!--
+              android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            让当前的CheckBox不能被点击，即不响应事件
+        -->
+
+        <CheckBox
+            android:id="@+id/Setting_CheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/setting_checkbox"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:paddingRight="@dimen/dimen_5dp" />
+
+        <TextView
+            android:id="@+id/Setting_TV_arrowRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:paddingRight="@dimen/dimen_5dp"
+            android:drawableRight="@drawable/arrow_right_normal"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout>

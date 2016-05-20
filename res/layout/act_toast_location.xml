@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#accc">
+
+    <TextView
+        android:id="@+id/toast_location_TV_Top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5dp"
+        android:background="@color/red"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/dimen_5dp"
+        android:text="按住提示框可拖拽到任意位置"
+        android:textColor="@android:color/black" 
+        android:visibility="invisible"/>
+	<!--TextView在相对布局中，所以其所在位置的规则需要由相对布局提供  -->
+    <TextView
+        android:id="@+id/toast_location_TV_Center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:drawableLeft="@drawable/ic_launcher"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dimen_5dp"
+        android:text="双击居中"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/toast_location_TV_Bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dimen_5dp"
+        android:background="@color/red"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/dimen_5dp"
+        android:text="按住提示框可拖拽到任意位置"
+        android:textColor="@android:color/black" />
+
+</RelativeLayout>

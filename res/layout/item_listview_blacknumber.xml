@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_5dp"
+        android:paddingRight="@dimen/dimen_5dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/dimen_5dp"
+            android:src="@drawable/antispamblack" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_5dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/item_LV_BlackNumber_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WZ"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/item_LV_BlackNumber_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(拦截来电和短信)"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/item_LV_BlackNumber_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18866590519"
+                android:textColor="@color/intercept_grey_text"
+                android:textSize="13sp" />
+        </LinearLayout>
+        <!--侧滑栏(有时间后实现)  -->
+       <!--  <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/red"
+                android:text="删除"/>
+        </LinearLayout> -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_LV_BlackNumber_LinLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blacknumber_item_click_show_background"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="举报"
+            android:textColor="@android:color/white" 
+            android:padding="@dimen/dimen_10dp"/>
+
+        <TextView
+            android:id="@+id/item_LV_BlackNumber_Eidt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="编辑"
+            android:textColor="@android:color/white"
+            android:padding="@dimen/dimen_10dp" />
+
+        <TextView
+            android:id="@+id/item_LV_BlackNumber_Delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@android:color/white"
+            android:padding="@dimen/dimen_10dp" />
+    </LinearLayout>
+
+</LinearLayout>

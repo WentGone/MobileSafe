@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <!--  标题栏-->
+    <RelativeLayout 
+       style="@style/Title_Layout"
+       android:background="@color/grey">
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="百宝箱"
+        style="@style/Title_textStyle"
+        android:gravity="center_vertical"/>
+    </RelativeLayout>
+    <GridView 
+        android:id="@+id/slip_left_GridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:numColumns="3"
+        android:background="@android:color/white">
+        
+    </GridView>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:divider="@drawable/divider_vertical"
+        android:dividerPadding="3dp">
+        <TextView 
+            android:id="@+id/slip_left_TV_setting"
+            android:text="设置"
+            style="@style/Slid_Left_TextStyle"/>
+        <TextView 
+            android:text="关于"
+            style="@style/Slid_Left_TextStyle"/>
+        <TextView 
+           android:text="更新"
+           style="@style/Slid_Left_TextStyle"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mobilesafe="http://schemas.android.com/apk/res/com.went_gone.mobilesafe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/Act_Title_Layout" >
+
+        <TextView
+            android:id="@+id/ComeBack"
+            style="@style/Act_Title_textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawableLeft="@drawable/event_back_normal"
+            android:gravity="center_vertical"
+            android:onClick="comeBack"
+            android:text="拦截设置" />
+    </RelativeLayout>
+
+    <TextView
+        style="@style/InterceptSettingPadding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:text="黑名单管理"
+        android:textColor="@color/intercept_grey_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider_horizontal"
+        android:orientation="vertical"
+        android:showDividers="middle" >
+
+        <com.went_gone.mobilesafe.ui.SettingItemView
+            android:id="@+id/siv_CMS_Setting_BlackList"
+            style="@style/InterceptSettingPadding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            mobilesafe:destitle="黑名单"
+            mobilesafe:ischeckbox="false" >
+        </com.went_gone.mobilesafe.ui.SettingItemView>
+    </LinearLayout>
+
+    <TextView
+        style="@style/InterceptSettingPadding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:text="拦截设置"
+        android:textColor="@color/intercept_grey_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider_horizontal"
+        android:orientation="vertical"
+        android:showDividers="middle" >
+
+        <com.went_gone.mobilesafe.ui.SettingItemView
+            android:id="@+id/siv_CMS_Setting_Intercept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            mobilesafe:desoff="自动拦截垃圾短信和骚扰电话"
+            mobilesafe:deson="自动拦截垃圾短信和骚扰电话"
+            mobilesafe:destitle="骚扰拦截服务" >
+        </com.went_gone.mobilesafe.ui.SettingItemView>
+    </LinearLayout>
+
+</LinearLayout>
